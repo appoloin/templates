@@ -5,8 +5,8 @@
     Description =    
 */
 
-#ifndef {__snakeCaseName__}
-#define {__snakeCaseName__}
+#ifndef {__snakeCaseName__}__H
+#define {__snakeCaseName__}__H
 
 
 

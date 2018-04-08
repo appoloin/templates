@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch CMake-built program",
+            "type": "cppdbg",
+            "request": "launch",
+            "stopAtEntry": false,
+            "program": "${command:cmake.launchTargetProgramPath}",
+            "args": ["${workspaceFolder}/bin/logConfig.ini"],
+            "cwd": "${workspaceRoot}/bin"
+        }
+    ]
+}

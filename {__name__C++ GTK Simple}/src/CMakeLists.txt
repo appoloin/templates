@@ -18,7 +18,6 @@ link_directories( ${GTKMM_LIBRARY_DIRS}  )
 include_directories( ${GTKMM_INCLUDE_DIRS}  )
 
 #create exe
-file(GLOB SOURCES ./*.cpp)
 add_executable(main 
                main.cpp 
                mainWindow.cpp)

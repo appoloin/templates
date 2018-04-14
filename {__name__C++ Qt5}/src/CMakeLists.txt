@@ -24,6 +24,8 @@ qt5_wrap_cpp(MOC_SOURCES ${PROJECT_SOURCE_DIR}/include/mainWindow.hpp)
 qt5_wrap_ui(UI_HEADERS ${PROJECT_SOURCE_DIR}/res/mainWindow.ui)
 qt5_add_resources(QRCS ${PROJECT_SOURCE_DIR}/res/resources.qrc)
 
+FIND_PACKAGE(Threads)
+
 #EXE
 add_executable(main
                main.cpp
@@ -32,5 +34,6 @@ add_executable(main
                ${UI_HEADERS}
                ${QRCS})
 
-target_link_libraries(main ${Qt5Widgets_LIBRARIES})   
+target_link_libraries(main ${Qt5Widgets_LIBRARIES}) 
+target_link_libraries(main ${CMAKE_THREAD_LIBS_INIT} )  
 target_link_libraries(main logger)     

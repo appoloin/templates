@@ -12,10 +12,12 @@ add_definitions( -DBOOST_ALL_NO_LINK
 add_library(logger logger.cpp)
 target_link_libraries(logger  ${Boost_LIBRARIES})
 
+FIND_PACKAGE(Threads)
 
 #create exe
 add_executable(main 
                main.cpp)
+target_link_libraries(main ${CMAKE_THREAD_LIBS_INIT} )
 target_link_libraries(main logger)
 
                     

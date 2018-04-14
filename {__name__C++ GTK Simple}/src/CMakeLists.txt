@@ -17,11 +17,14 @@ pkg_check_modules(GTKMM gtkmm-3.0)
 link_directories( ${GTKMM_LIBRARY_DIRS}  )
 include_directories( ${GTKMM_INCLUDE_DIRS}  )
 
+FIND_PACKAGE(Threads)
+
 #create exe
 add_executable(main 
                main.cpp 
                mainWindow.cpp)
 target_link_libraries(main ${GTKMM_LIBRARIES})
+target_link_libraries(main ${CMAKE_THREAD_LIBS_INIT} )
 target_link_libraries(main logger)
 
 #copy res to bin

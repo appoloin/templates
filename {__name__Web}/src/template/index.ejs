@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title><%= htmlWebpackPlugin.options.title %></title>
+	</head>
+	<body>
+		<div id="menu">
+			<%= require('html-loader!./common/menu.ejs') %>
+		</div>
+		<div class="main">
+			
+			<%= require('html-loader!./common/header.ejs') %>
+	
+			<div id="content">
+
+				<h1>Some content goes here!!!</h1>
+			</div>
+		
+			<%= require('html-loader!./common/footer.ejs') %>
+		</div>
+	</body>
+</html>

@@ -26,4 +26,7 @@ module.exports = {
         }],
         "camelcase": "warn",
     },
+    "parserOptions": {
+        "sourceType": "module"
+      }
 };

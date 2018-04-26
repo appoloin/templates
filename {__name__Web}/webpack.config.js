@@ -13,7 +13,7 @@ module.exports = {
 	},
 	plugins: [
 		new FaviconsWebpackPlugin({
-			logo: "./src/images/icon.png",
+			logo: "./src/images/themeisle.svg",
 			icons: {
 				android: false,
 				appleIcon: false,
@@ -72,6 +72,48 @@ module.exports = {
 				removeStyleLinkTypeAttributese: true,
 				useShortDoctype: true
 			}
+		}),
+		new HtmlWebpackPlugin({
+			template: "./src/template/anotherPage.ejs",
+			filename: "anotherPage.html",
+			title: "Another Page",
+			chunks: ["about"],
+			minify: {
+				html5: true,
+				collapseWhitespace: true,
+				minifyCSS: true,
+				minifyJS: true,
+				minifyURLs: false,
+				removeAttributeQuotes: true,
+				removeComments: true,
+				removeEmptyAttributes: true,
+				removeOptionalTags: true,
+				removeRedundantAttributes: true,
+				removeScriptTypeAttributes: true,
+				removeStyleLinkTypeAttributese: true,
+				useShortDoctype: true
+			}
+		}),
+		new HtmlWebpackPlugin({
+			template: "./src/template/anotherPage2.ejs",
+			filename: "anotherPage2.html",
+			title: "Another Page 2",
+			chunks: ["about"],
+			minify: {
+				html5: true,
+				collapseWhitespace: true,
+				minifyCSS: true,
+				minifyJS: true,
+				minifyURLs: false,
+				removeAttributeQuotes: true,
+				removeComments: true,
+				removeEmptyAttributes: true,
+				removeOptionalTags: true,
+				removeRedundantAttributes: true,
+				removeScriptTypeAttributes: true,
+				removeStyleLinkTypeAttributese: true,
+				useShortDoctype: true
+			}
 		})
 	],
 	output: {
@@ -110,7 +152,7 @@ module.exports = {
 					loader: "file-loader",
 					options: {
 						name: "[name].[ext]",
-						outputPath: "./font/"
+						outputPath: "./fonts/"
 					}
 				}
 			},
